@@ -2,11 +2,19 @@
 import { useEffect, useState } from "react";
 import { getCatalog } from "@/services/getCatalog";
 import { Game } from "@/utils/endpoint";
+import { GamesList } from "@/components";
+import { useStore } from '@/store/useStore';
+import { useShallow } from 'zustand/shallow';
 
 const Catalog = () => {
+  const { genre, setGenre } = useStore(
+      useShallow((state) => ({
+        genre: state.genre,
+        setGenre: state.setGenre
+      }))
+    );
   const [games, setGames] = useState<Game[]>([]);
-  const [genre, setGenre] = useState("all"); // for filter
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(1); // for filter
   const [totalPages, setTotalPages] = useState(1);
   
   useEffect(() => {
@@ -22,11 +30,9 @@ const Catalog = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 font-bold text-4xl text-blue-600">
       <h1>HOME</h1>
-      {games.map((game) => (
-        <p key={game.id}>{game.name}</p>
-      ))}
+      <GamesList games={games} />
       {page < totalPages && (
-        <button onClick={() => setPage(page + 1)} className="see-more-btn">
+        <button onClick={() => setPage(page + 1)} className="see-more">
           See More
         </button>
       )}
