@@ -1,0 +1,6 @@
+.footer {
+  @apply flex justify-center align-middle bg-grey_dark;
+  .footer__wrap {
+    @apply max-w-container w-full flex justify-center px-4 py-16;
+  }
+}

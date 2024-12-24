@@ -1,0 +1,10 @@
+.nav {
+  @apply flex justify-center align-middle bg-grey_light;
+  .nav__wrap {
+    @apply max-w-container w-full flex justify-between p-4;
+  }
+  .nav__logo {
+    @apply text-grey_button font-bold text-lg;
+  }
+}
+

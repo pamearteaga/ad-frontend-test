@@ -45,6 +45,9 @@ const config: Config = {
         semibold: "600",
         bold: "700",
       },
+      maxWidth: {
+        container: "1280px"
+      },
     },
   },
   plugins: [],
