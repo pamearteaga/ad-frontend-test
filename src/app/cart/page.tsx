@@ -1,14 +1,19 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useStore } from "@/store/useStore";
 import { useShallow } from "zustand/shallow";
+import { urlFormat } from "@/utils/urlFormat";
 import { ItemShop, Summary, Loader } from "@/components";
 import { Arrow } from "@/assets";
 
 import styles from "./styles.module.css";
 
 const Cart = () => {
+  const searchParams = useSearchParams();
+  const genre = searchParams.get("genre") || "all";
+
   const { cart, setCart } = useStore(
     useShallow((state) => ({
       cart: state.cart,
@@ -33,7 +38,7 @@ const Cart = () => {
   return (
     <main className={styles.cart}>
       <div className={styles.cart_back}>
-        <Link href="/" className={styles.back_link}>
+        <Link href={urlFormat(genre)} className={styles.back_link}>
           <Arrow /> Back to Catalog
         </Link>
       </div>

@@ -5,8 +5,6 @@ import { Game } from "@/utils/endpoint";
 interface Store {
   cart: Game[];
   setCart: (cart: Game[]) => void;
-  genre: string;
-  setGenre: (genre: string) => void;
 }
 
 export const useStore = create(
@@ -14,8 +12,6 @@ export const useStore = create(
     (set) => ({
       cart: [],
       setCart: (cart: Game[]) => set({ cart }),
-      genre: "all",
-      setGenre: (genre: string) => set({ genre }),
     }),
     {
       name: "GamerShop",

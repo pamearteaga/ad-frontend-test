@@ -1,29 +1,22 @@
 import React from "react";
-import { useStore } from "@/store/useStore";
-import { useShallow } from "zustand/shallow";
 
 import styles from "./styles.module.css";
 
 type FilterType = {
-  options: any;
+  options: string[];
+  selectedGenre: string;
+  handleOnChange: (value: string) => void;
 };
 
-export const Filter = ({ options }: FilterType) => {
-  const { genre, setGenre } = useStore(
-    useShallow((state) => ({
-      genre: state.genre,
-      setGenre: state.setGenre,
-    }))
-  );
-
+export const Filter = ({ options, selectedGenre, handleOnChange }: FilterType) => {
   return (
     <>
       <label htmlFor="genre"> Genre | </label>
       <select
         name="genre"
         id="genre"
-        value={genre}
-        onChange={(e) => setGenre(e.target.value)}
+        value={selectedGenre}
+        onChange={(e) => handleOnChange(e.target.value)}
       >
         <option value="all">All</option>
         {options?.map((option: string) => (
