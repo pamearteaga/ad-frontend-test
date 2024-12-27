@@ -10,7 +10,7 @@ type ItemShopType = {
 };
 
 export const ItemShop = ({ item, removeItem }: ItemShopType) => {
-  const { id, genre, image, name, description, price } = item || null;
+  const { id, genre, image, name, description, price, isNew } = item || null;
 
   return (
     <div className={styles.itemShop}>
@@ -18,6 +18,7 @@ export const ItemShop = ({ item, removeItem }: ItemShopType) => {
         <RemoveIcon />
       </div>
       <div className={styles.itemShop_poster}>
+        {isNew && <p className={styles.poster__tag}>New</p>}
         <img className={styles.poster_img} src={image} alt={name} />
       </div>
       <div className={styles.itemShop_info}>

@@ -14,8 +14,7 @@
       @apply text-neutral-500 uppercase font-bold text-base mb-2;
     }
     .info__product {
-      @apply flex justify-between items-end font-bold text-grey_dark;
-      margin-bottom: 22px;
+      @apply flex justify-between items-end font-bold text-grey_dark mb-5 gap-1;
       .product__name {
         @apply text-md text-ellipsis overflow-hidden whitespace-nowrap;
       }

@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Game } from "@/utils/endpoint";
 import { useStore } from "@/store/useStore";
 import { useShallow } from "zustand/shallow";
+import { removeItemFromCart } from "@/utils";
 
 import styles from "./styles.module.css";
 
@@ -10,6 +12,8 @@ type GameCardType = {
 }
 
 export const GameCard = ({ game }: GameCardType) => {
+  const { id, genre, image, name, price, isNew } = game || null;
+
   const { cart, setCart } = useStore(
       useShallow((state) => ({
         cart: state.cart,
@@ -17,7 +21,15 @@ export const GameCard = ({ game }: GameCardType) => {
       }))
     );
 
-  const { genre, image, name, price, isNew } = game || null;
+  const isGameInCart = cart.some((item) => item.id === game.id);
+
+  const onClickButtonCard = () => {
+    if (isGameInCart) {
+      setCart(removeItemFromCart(id, cart));
+    } else {
+      setCart([...cart, game]);
+    }
+  };
 
   return (
     <div className={styles.card}>
@@ -34,9 +46,9 @@ export const GameCard = ({ game }: GameCardType) => {
       </div>
       <button
         className={styles.card__button}
-        onClick={() => setCart([...cart, game])}
+        onClick={() => onClickButtonCard()}
       >
-        ADD TO CART
+        { isGameInCart ? "REMOVE" : "ADD TO CART" }
       </button>
     </div>
   );

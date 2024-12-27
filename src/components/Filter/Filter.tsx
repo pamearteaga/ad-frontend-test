@@ -10,9 +10,10 @@ type FilterType = {
 
 export const Filter = ({ options, selectedGenre, handleOnChange }: FilterType) => {
   return (
-    <>
-      <label htmlFor="genre"> Genre | </label>
+    <div className={styles.filter}>
+      <label className={styles.filter_label} htmlFor="genre">Genre</label>
       <select
+        className={styles.filter_select}
         name="genre"
         id="genre"
         value={selectedGenre}
@@ -25,6 +26,6 @@ export const Filter = ({ options, selectedGenre, handleOnChange }: FilterType) =
           </option>
         ))}
       </select>
-    </>
+    </div>
   );
 };

@@ -56,13 +56,11 @@ const Catalog = () => {
         <div className="head__title">
           <h1 className="title">Top Sellers</h1>
         </div>
-        <div className="head__filter">
-          <Filter
-            options={availableFilters}
-            selectedGenre={genre}
-            handleOnChange={onGenreChange}
-          />
-        </div>
+        <Filter
+          options={availableFilters}
+          selectedGenre={genre}
+          handleOnChange={onGenreChange}
+        />
       </div>
       <hr className="home__line" />
       <div className="home__content">

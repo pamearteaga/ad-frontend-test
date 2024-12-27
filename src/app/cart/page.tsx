@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useStore } from "@/store/useStore";
 import { useShallow } from "zustand/shallow";
-import { urlFormat } from "@/utils/urlFormat";
+import { urlFormat, removeItemFromCart } from "@/utils/";
 import { ItemShop, Summary, Loader } from "@/components";
 import { Arrow } from "@/assets";
 
@@ -29,11 +29,6 @@ const Cart = () => {
     }, 200);
     return () => clearTimeout(timeout);
   }, []);
-
-  const removeItemFromCart = (id: string) => {
-    const filterCart = cart.filter((item) => item.id !== id);
-    setCart(filterCart);
-  };
 
   return (
     <main className={styles.cart}>
@@ -60,7 +55,7 @@ const Cart = () => {
                 <ItemShop
                   key={item.id}
                   item={{ ...item }}
-                  removeItem={(id) => removeItemFromCart(id)}
+                  removeItem={(id) => removeItemFromCart(id, cart)}
                 />
               ))}
             </div>

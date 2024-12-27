@@ -46,7 +46,11 @@ const config: Config = {
         bold: "700",
       },
       maxWidth: {
-        container: "1280px"
+        container: "1280px",
+        half: "47%",
+      },
+      width: {
+        half: "47%",
       },
       height: {
         card: "436px"

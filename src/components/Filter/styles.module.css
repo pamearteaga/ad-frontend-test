@@ -1,0 +1,9 @@
+.filter {
+  @apply w-full flex justify-between md:justify-end text-grey_dark text-lg gap-6;
+  .filter_label {
+    @apply border-r border-grey_dark font-bold pr-6;
+  }
+  .filter_select {
+    @apply w-4/5 md:w-52;
+  }
+}
