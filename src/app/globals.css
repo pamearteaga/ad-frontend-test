@@ -3,12 +3,21 @@
 @tailwind utilities;
 
 .home {
-  @apply  w-full flex flex-col items-center min-h-screen;
+  @apply  w-full flex flex-col items-center min-h-screen mt-16;
   .home__head {
-    @apply w-full max-w-container flex justify-between items-center align-middle px-4 py-12;
+    @apply w-full max-w-container flex flex-col justify-between items-center align-middle px-6 py-8 md:py-12;
+    .head__title {
+      @apply w-full mb-8;
+    }
+    .head__filter {
+      @apply w-full flex justify-center md:py-4 md:justify-end;
+    }
+  }
+  .home__line {
+    @apply w-full;
   }
   .home__content {
-    @apply w-full max-w-container flex flex-col align-middle px-4 py-12;
+    @apply w-full max-w-container flex flex-col align-middle px-6 py-6 md:py-12;
   }
 }
 
@@ -16,3 +25,20 @@
   @apply text-grey_dark font-bold text-2xl;
 }
 
+.subtitle {
+  @apply text-grey_dark font-normal text-xl;
+}
+
+@layer utilities {
+  @keyframes spin-custom {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .loader {
+    @apply flex justify-center;
+    .loader__circle {
+      @apply w-12 aspect-square rounded-full border-8 border-grey_medium2 border-r-orange-500 animate-spin-custom;
+    }
+  }
+}

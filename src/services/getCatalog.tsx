@@ -23,9 +23,6 @@ export const getCatalog = async (genre: string, page: number): Promise<CatalogTy
     const games = filteredGames.slice(fromIndex, toIndex);
     const totalPages = Math.ceil(filteredGames.length / ITEMS_PER_PAGE);
 
-    /* const response = await GET(new Request(`?genre=${genre}&page=${page}`));
-    const data = await response.json();
- */
     return {
       games,
       totalPages,

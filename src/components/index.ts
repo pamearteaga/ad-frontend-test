@@ -2,3 +2,8 @@ export * from "./GamesList/GamesList";
 export * from "./GameCard/GameCard";
 export * from "./Nav/Nav";
 export * from "./Footer/Footer";
+export * from "./Loader/Loader";
+export * from "./Button/Button";
+export * from "./Filter/Filter";
+export * from "./ItemShop/ItemShop";
+export * from "./Summary/Summary";

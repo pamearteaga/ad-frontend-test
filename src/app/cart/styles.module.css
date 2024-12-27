@@ -1,0 +1,15 @@
+.cart {
+  @apply w-full flex flex-col items-center min-h-screen mt-16;
+  .cart_back {
+    @apply w-full max-w-container px-6 py-6;
+    .back_link {
+      @apply flex flex-row items-center w-fit gap-3 text-grey_dark text-base font-medium;
+    }
+  }
+  .cart_head {
+    @apply w-full max-w-container px-6 py-12;
+  }
+  .cart_content {
+    @apply w-full max-w-container flex flex-col md:flex-row justify-between px-6 pb-12 gap-12 md:gap-2 lg:gap-20;
+  }
+}

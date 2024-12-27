@@ -1,0 +1,33 @@
+.itemShop {
+  @apply flex flex-col lg:flex-row max-w-2xl py-5 px-4 border-b border-grey_medium2 relative;
+  .itemShop_remove {
+    @apply absolute top-6 right-4 md:right-5 cursor-pointer;
+  }
+  .itemShop_poster {
+    @apply flex w-64 min-w-64 h-36 md:h-40 overflow-hidden relative border border-grey_light;
+    .poster_img {
+      @apply w-full h-auto;
+    }
+  }
+  .itemShop_info {
+    @apply flex flex-col md:max-w-64 lg:max-w-96 pt-2 md:px-6 justify-between;
+    .info_item {
+      @apply flex flex-col gap-1;
+      .item_genre {
+        @apply text-neutral-500 uppercase font-bold text-sm md:text-base mb-1;
+      }
+      .item_name {
+        @apply text-md md:text-lg font-bold text-ellipsis overflow-hidden whitespace-nowrap;
+      }
+      .item_description {
+        @apply text-base text-neutral-500 font-normal;
+      }
+    }
+  }
+  .info_price {
+    @apply w-full h-10 flex justify-end items-end;
+    .price {
+      @apply text-md md:text-lg font-bold text-grey_dark;
+    }
+  }
+}

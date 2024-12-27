@@ -1,0 +1,30 @@
+.card {
+  @apply rounded-2xl border-grey_medium2 border p-6 w-full max-w-96;
+  .card__poster {
+    @apply h-60 flex relative overflow-hidden rounded-t-2xl mb-5 border border-grey_light;
+    .poster__tag {
+      @apply absolute top-3 left-3 py-2 px-3 text-grey_dark bg-grey_light rounded;
+    }
+    .poster__img {
+      @apply w-full h-auto;
+    }
+  }
+  .card__info {
+    .info__genre {
+      @apply text-neutral-500 uppercase font-bold text-base mb-2;
+    }
+    .info__product {
+      @apply flex justify-between items-end font-bold text-grey_dark;
+      margin-bottom: 22px;
+      .product__name {
+        @apply text-md text-ellipsis overflow-hidden whitespace-nowrap;
+      }
+      .product__price {
+        @apply text-lg;
+      }
+    }
+  }
+  .card__button {
+    @apply w-full border border-grey_dark rounded-lg text-grey_dark text-base font-bold uppercase py-4 px-6;
+  }
+}

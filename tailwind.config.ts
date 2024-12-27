@@ -48,6 +48,12 @@ const config: Config = {
       maxWidth: {
         container: "1280px"
       },
+      height: {
+        card: "436px"
+      },
+      animation: {
+        "spin-custom": "spin-custom 1s linear infinite",
+      },
     },
   },
   plugins: [],

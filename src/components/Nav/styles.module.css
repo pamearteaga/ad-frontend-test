@@ -1,10 +1,16 @@
 .nav {
-  @apply flex justify-center align-middle bg-grey_light;
-  .nav__wrap {
-    @apply max-w-container w-full flex justify-between p-4;
+  @apply flex w-full justify-center align-middle bg-grey_light fixed top-0 z-10;
+  .nav_wrap {
+    @apply max-w-container w-full flex justify-between px-6 py-4;
   }
-  .nav__logo {
+  .nav_logo {
     @apply text-grey_button font-bold text-lg;
+  }
+  .nav_icon {
+    @apply relative;
+    .icon_items {
+      @apply absolute -bottom-1 -right-1 text-xs font-semibold text-white rounded-full bg-orange-500 px-1;
+    }
   }
 }
 
