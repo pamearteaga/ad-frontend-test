@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Game } from "@/utils/endpoint";
 import { useStore } from "@/store/useStore";
 import { useShallow } from "zustand/shallow";
@@ -32,7 +32,7 @@ export const GameCard = ({ game }: GameCardType) => {
   };
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-testid="gameCard">
       <div className={styles.card__poster}>
         {isNew && <p className={styles.poster__tag}>New</p>}
         <img className={styles.poster__img} src={image} alt={name} />

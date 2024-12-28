@@ -12,7 +12,7 @@ export const GamesList = ({ games }: GamesListProps) => {
   if(games?.length === 0) return <Loader />
 
   return (
-    <div className={styles.list} data-testid="gameList">
+    <div className={styles.list} data-testid="gamesList">
       {games?.map((game) => (
         <GameCard game={{...game}} key={game.id}/>
       ))}

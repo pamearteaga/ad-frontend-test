@@ -55,7 +55,7 @@ const Cart = () => {
                 <ItemShop
                   key={item.id}
                   item={{ ...item }}
-                  removeItem={(id) => removeItemFromCart(id, cart)}
+                  removeItem={(id) => setCart(removeItemFromCart(id, cart))}
                 />
               ))}
             </div>

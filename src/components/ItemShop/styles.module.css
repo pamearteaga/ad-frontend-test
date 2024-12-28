@@ -1,7 +1,7 @@
 .itemShop {
   @apply flex flex-col w-full md:flex-row max-w-2xl py-5 px-4 md:px-0 lg:px-4 border-b border-grey_medium2 relative;
   .itemShop_remove {
-    @apply absolute top-6 right-4 md:right-5 cursor-pointer;
+    @apply absolute top-6 right-4 md:right-5 cursor-pointer z-10;
   }
   .itemShop_poster {
     @apply flex w-64 min-w-64 h-36 md:min-w-28 md:w-28 md:h-28 lg:h-40 lg:w-64 lg:min-w-64 overflow-hidden relative border border-grey_light;

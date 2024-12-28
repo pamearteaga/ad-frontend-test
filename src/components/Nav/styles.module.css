@@ -1,5 +1,5 @@
 .nav {
-  @apply flex w-full justify-center align-middle bg-grey_light fixed top-0 z-10;
+  @apply flex w-full justify-center align-middle bg-grey_light fixed top-0 z-20;
   .nav_wrap {
     @apply max-w-container w-full flex justify-between px-6 py-4;
   }
