@@ -1,0 +1,7 @@
+.button {
+  @apply w-full bg-grey_button text-white text-sm font-bold rounded-lg px-7 py-5 gap-2 md:w-auto md:text-base;
+}
+
+.button_full {
+  @apply button md:w-full;
+}
