@@ -1,24 +1,31 @@
 .summary {
   @apply w-full md:w-half md:max-w-half lg:w-full lg:max-w-lg text-grey_dark;
-  .summary_items {
-    @apply border border-grey_medium2 rounded-lg py-6 px-4 md:py-8 md:px-5 mb-10 md:mb-8;
-    .summary_head {
-      @apply flex flex-col gap-2 mb-12;
-      .summary_title {
-        @apply font-bold text-lg md:text-xl;
-      }
-      .summary_qty {
-        @apply font-normal text-md;
-      }
-    }
-    .summary_item {
-      @apply flex items-center justify-between font-normal text-md mb-2 gap-1;
-      .item_name {
-        @apply text-ellipsis overflow-hidden whitespace-nowrap;
-      }
-    }
-    .summary_total {
-      @apply flex items-center justify-between font-bold text-lg border-t border-grey_medium2 py-5 mt-5;
-    }
-  }
+}
+
+.summary_items {
+  @apply border border-grey_medium2 rounded-lg py-6 px-4 md:py-8 md:px-5 mb-10 md:mb-8;
+}
+
+.summary_head {
+  @apply flex flex-col gap-2 mb-12;
+}
+
+.summary_title {
+  @apply font-bold text-lg md:text-xl;
+}
+
+.summary_qty {
+  @apply font-normal text-md;
+}
+
+.summary_item {
+  @apply flex items-center justify-between font-normal text-md mb-2 gap-1;
+}
+
+.item_name {
+  @apply text-ellipsis overflow-hidden whitespace-nowrap;
+}
+
+.summary_total {
+  @apply flex items-center justify-between font-bold text-lg border-t border-grey_medium2 py-5 mt-5;
 }
