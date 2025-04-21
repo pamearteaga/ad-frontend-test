@@ -7,9 +7,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footer} data-testid="footer">
       <div className={styles.footer__wrap}>
-        <Link href="/" className="logo">
-          <ADlogo />
-        </Link>
+        <p>Pamela Arteaga | 2025</p>
       </div>
     </footer>
   );
